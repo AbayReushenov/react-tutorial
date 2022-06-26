@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux basic example</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        Кликнуто: <span id="count">Все равно это затрется</span> раз
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="plusIfOdd">Условное увеличение. Только если сейчас НЕ четное значение</button>
+        <button id="plusAsync">Асинхронное увеличение</button>
+      </p>
+    </div>
+    <script>
+      function counter(state, action) {
+        if (typeof state === 'undefined') {
+          return 0
+        }
+
+        switch (action.type) {
+          case 'PLUS':
+            return state + 1
+          case 'MINUS':
+            return state - 1
+          default:
+            return state
+        }
+      }
+
+      var store = Redux.createStore(counter)
+      var valueEl = document.getElementById('count')
+
+      function render() {
+        valueEl.innerHTML = store.getState().toString()
+      }
+
+      render()
+      store.subscribe(render)
+
+      document.getElementById('plus')
+        .addEventListener('click', function () {
+          store.dispatch({ type: 'PLUS' })
+        })
+
+      document.getElementById('minus')
+        .addEventListener('click', function () {
+          store.dispatch({ type: 'MINUS' })
+        })
+
+      document.getElementById('plusIfOdd')
+        .addEventListener('click', function () {
+          if (store.getState() % 2 !== 0) {
+            store.dispatch({ type: 'PLUS' })
+          }
+        })
+
+      document.getElementById('plusAsync')
+        .addEventListener('click', function () {
+          setTimeout(function () {
+            store.dispatch({ type: 'PLUS' })
+          }, 1000)
+        })
+    </script>
+  </body>
+</html>

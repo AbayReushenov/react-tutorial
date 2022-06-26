@@ -1,0 +1,17 @@
+.App {
+    display: flex;
+    align-items: center;
+    margin: 2% 40%;
+  }
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.table {
+  flex-wrap: nowrap;
+  display: flex;
+  width: 100%;
+  margin: 10px 0px;
+  border: solid 1px coral ;
+}
