@@ -7,7 +7,9 @@ export const CounterCurrentState = () => {
 
   return (
     <div className='counter'>
-      <h1>Counter {count}</h1>
+      <div className='header'>
+        <h1>Counter {count}</h1>
+      </div>
     </div>
   );
 };

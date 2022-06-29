@@ -19,6 +19,13 @@ function App() {
         <AddAnyNumberClassComponent precision={Precision.TWO} />
         <AddAnyNumberAsync precision={Precision.THREE}/>
       </div>
+      <div className='container'>
+        <Counter />
+        <CounterClass />
+        <AddAnyNumber precision={Precision.ZERO} />
+        <AddAnyNumberClassComponent precision={Precision.TWO} />
+        <AddAnyNumberAsync precision={Precision.THREE}/>
+      </div>
     </div>
   );
 }

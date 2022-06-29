@@ -30,7 +30,6 @@ class AddAnyNumberClassComponent extends React.Component<Props, State> {
   };
 
   submitAdd = (addNumber: string) => {
-    console.log(' --', addNumber);
     const num = Number(addNumber);
     if (!isNaN(num) && num !== 0) {
       this.props.addSomeCount({ count: num });
