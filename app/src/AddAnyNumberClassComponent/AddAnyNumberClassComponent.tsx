@@ -25,7 +25,6 @@ class AddAnyNumberClassComponent extends React.Component<Props, State> {
     const valid: boolean = event.currentTarget.validity.valid;
     if (valid) {
       const current = event.currentTarget.value.replace(/,/, '.');
-      console.log(current);
       this.setState({ addNumber: current });
     }
   };

@@ -6,6 +6,7 @@ import { Counter } from './Counter/Counter';
 import { CounterCurrentState } from './CounterCurrentState/CounterCurrentState';
 import  AddAnyNumberClassComponent from './AddAnyNumberClassComponent/AddAnyNumberClassComponent';
 import CounterClass from './CounterClass/CounterClass';
+import { AddAnyNumberAsync } from './AddAnyNumberAsync/AddAnyNumberAsync';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <CounterClass />
         <AddAnyNumber precision={Precision.ZERO} />
         <AddAnyNumberClassComponent precision={Precision.TWO} />
+        <AddAnyNumberAsync precision={Precision.THREE}/>
       </div>
     </div>
   );
