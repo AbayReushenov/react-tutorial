@@ -8,6 +8,9 @@ import AddAnyNumberClassComponent from './AddAnyNumberClassComponent/AddAnyNumbe
 import CounterClass from './CounterClass/CounterClass';
 import { AddAnyNumberAsyncSaga } from './AddAnyNumberAsyncSaga/AddAnyNumberAsyncSaga';
 import { AddAnyNumberAsyncReduxToolKit } from './AddAnyNumberAsyncReduxToolKit/AddAnyNumberAsyncReduxToolKit';
+import AddAnyNumberClassComponentV2 from './AddAnyNumberClassComponentV2/AddAnyNumberClassComponentV2';
+
+
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
       <div className='container'>
         <AddAnyNumberAsyncSaga precision={Precision.THREE} />
         <AddAnyNumberAsyncReduxToolKit precision={Precision.TWO}/>
+        <AddAnyNumberClassComponentV2 precision={Precision.ZERO}/>
       </div>
     </div>
   );
