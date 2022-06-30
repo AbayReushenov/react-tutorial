@@ -16,6 +16,7 @@ export const store = configureStore({
     devTools: process.env.NODE_ENV !== "production"
 });
 
+export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
 
 sagaMiddleware.run(rootSaga);

@@ -9,7 +9,7 @@ interface Props {
   precision: number;
 }
 
-export const AddAnyNumberAsync: React.FC<Props> = ({
+export const AddAnyNumberAsyncSaga: React.FC<Props> = ({
   precision = Precision.ZERO,
 }) => {
   const [addNumber, setAddNumber] = useState<string>('');
@@ -39,7 +39,8 @@ export const AddAnyNumberAsync: React.FC<Props> = ({
 
   return (
     <div className='box'>
-       <h1 className='red'>Async  functional component</h1>
+      <h1 className='red'>Async created by Saga</h1>
+      
       <h1>Enter any number</h1>
       <div className='input'>
         <SwitchInputHeader addNumber={addNumber} />

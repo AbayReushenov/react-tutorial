@@ -1,4 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { addCountAsyncTwo } from './addCountAsyncTwo';
+import { actions as actionsError } from '../error/error';
 
 export interface CountState {
   count: number;
@@ -18,12 +20,36 @@ const count = createSlice({
     minusCount: (state: CountState) => {
       state.count = state.count - 1;
     },
-    addSomeCount: (
-      state: CountState,
-      action: PayloadAction<CountState>
-    ) => {
+    addSomeCount: (state: CountState, action: PayloadAction<CountState>) => {
       state.count = state.count + action.payload.count;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(addCountAsyncTwo.pending, function () {
+      actionsError.returnErrors({
+        msg: { msg: 'Идет сохранение данных' },
+        status: 'loading',
+        id: null,
+      });
+    });
+    builder.addCase(
+      addCountAsyncTwo.fulfilled,
+      (state: CountState, action: PayloadAction<CountState>) => {
+        state.count = state.count + action.payload.count;
+        actionsError.returnErrors({
+          msg: { msg: null },
+          status: 'resolved',
+          id: null,
+        });
+      }
+    );
+    builder.addCase(addCountAsyncTwo.rejected, function (error: any) {
+      actionsError.returnErrors({
+        msg: error.response.data,
+        status: error.response.status,
+        id: null,
+      });
+    });
   },
 });
 

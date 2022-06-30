@@ -6,7 +6,8 @@ import { Counter } from './Counter/Counter';
 import { CounterCurrentState } from './CounterCurrentState/CounterCurrentState';
 import AddAnyNumberClassComponent from './AddAnyNumberClassComponent/AddAnyNumberClassComponent';
 import CounterClass from './CounterClass/CounterClass';
-import { AddAnyNumberAsync } from './AddAnyNumberAsync/AddAnyNumberAsync';
+import { AddAnyNumberAsyncSaga } from './AddAnyNumberAsyncSaga/AddAnyNumberAsyncSaga';
+import { AddAnyNumberAsyncReduxToolKit } from './AddAnyNumberAsyncReduxToolKit/AddAnyNumberAsyncReduxToolKit';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <AddAnyNumberClassComponent precision={Precision.TWO} />
       </div>
       <div className='container'>
-        <AddAnyNumberAsync precision={Precision.THREE} />
+        <AddAnyNumberAsyncSaga precision={Precision.THREE} />
+        <AddAnyNumberAsyncReduxToolKit precision={Precision.TWO}/>
       </div>
     </div>
   );
