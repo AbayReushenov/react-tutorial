@@ -4,7 +4,7 @@ import { apply, put,  takeLatest } from 'redux-saga/effects';
 
 import { api } from '../../../api';
 import { actions as actionsError } from '../../error/error';
-import { actions as actionsCount } from '../';
+import { actions as actionsCount } from '..';
 
 interface Payload {
   count: number;
