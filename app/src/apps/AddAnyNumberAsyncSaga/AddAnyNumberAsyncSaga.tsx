@@ -1,21 +1,19 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addCountAsyncTwo } from '../store/count/addCountAsyncTwo';
+import { addSomeCountAsync } from '../../store/count/addCountAsync';
 import { SwitchInputHeader } from '../common/components/SwitchInputHeader';
 import { pattern } from '../common/helpers/pattern';
 import { placeholder } from '../common/helpers/placeholder';
 import { Precision } from '../common/helpers/Precision';
-import { AppDispatch } from '../store';
 interface Props {
   precision: number;
 }
 
-export const AddAnyNumberAsyncReduxToolKit: React.FC<Props> = ({
+export const AddAnyNumberAsyncSaga: React.FC<Props> = ({
   precision = Precision.ZERO,
 }) => {
   const [addNumber, setAddNumber] = useState<string>('');
-  const dispatch = useDispatch<AppDispatch>();
-
+  const dispatch = useDispatch();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const valid: boolean = event.currentTarget.validity.valid;
@@ -28,7 +26,7 @@ export const AddAnyNumberAsyncReduxToolKit: React.FC<Props> = ({
   const submitAdd = (addNumber: string) => {
     const num = Number(addNumber);
     if (!isNaN(num) && num !== 0) {
-      dispatch(addCountAsyncTwo({ count: Number(addNumber) }));
+      dispatch(addSomeCountAsync({ count: Number(addNumber) }));
       setAddNumber('');
     }
   };
@@ -41,7 +39,8 @@ export const AddAnyNumberAsyncReduxToolKit: React.FC<Props> = ({
 
   return (
     <div className='box'>
-       <h1 className='red'>Async created by AsyncThunk</h1>
+      <h1 className='red'>Async created by Saga</h1>
+      
       <h1>Enter any number</h1>
       <div className='input'>
         <SwitchInputHeader addNumber={addNumber} />

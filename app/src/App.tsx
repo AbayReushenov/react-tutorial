@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import { AddAnyNumber } from './AddAnyNumber/AddAnyNumber';
-import { Precision } from './common/helpers/Precision';
-import { Counter } from './Counter/Counter';
-import { CounterCurrentState } from './CounterCurrentState/CounterCurrentState';
-import AddAnyNumberClassComponent from './AddAnyNumberClassComponent/AddAnyNumberClassComponent';
-import CounterClass from './CounterClass/CounterClass';
-import { AddAnyNumberAsyncSaga } from './AddAnyNumberAsyncSaga/AddAnyNumberAsyncSaga';
-import { AddAnyNumberAsyncReduxToolKit } from './AddAnyNumberAsyncReduxToolKit/AddAnyNumberAsyncReduxToolKit';
-import AddAnyNumberClassComponentV2 from './AddAnyNumberClassComponentV2/AddAnyNumberClassComponentV2';
+import { AddAnyNumber } from './apps/AddAnyNumber/AddAnyNumber';
+import { Precision } from './apps/common/helpers/Precision';
+import { Counter } from './apps/Counter/Counter';
+import { CounterCurrentState } from './apps/CounterCurrentState/CounterCurrentState';
+import AddAnyNumberClassComponent from './apps/AddAnyNumberClassComponent/AddAnyNumberClassComponent';
+import CounterClass from './apps/CounterClass/CounterClass';
+import { AddAnyNumberAsyncSaga } from './apps/AddAnyNumberAsyncSaga/AddAnyNumberAsyncSaga';
+import { AddAnyNumberAsyncReduxToolKit } from './apps/AddAnyNumberAsyncReduxToolKit/AddAnyNumberAsyncReduxToolKit';
+import AddAnyNumberClassComponentV2 from './apps/AddAnyNumberClassComponentV2/AddAnyNumberClassComponentV2';
+import { PostsFetchBySaga } from './apps/PostsFetchBySaga/PostsFetchBySaga';
+import { TodosFetchByThank } from './apps/TodosFetchByThank/TodosFetchByThank';
 
 
 
@@ -17,15 +19,19 @@ function App() {
     <div className='main'>
       <CounterCurrentState />
       <div className='container'>
-        <Counter />
         <CounterClass />
-        <AddAnyNumber precision={Precision.ZERO} />
         <AddAnyNumberClassComponent precision={Precision.TWO} />
+        <AddAnyNumberClassComponentV2 precision={Precision.ZERO}/>
       </div>
       <div className='container'>
+        <Counter />
+        <AddAnyNumber precision={Precision.ZERO} />
         <AddAnyNumberAsyncSaga precision={Precision.THREE} />
         <AddAnyNumberAsyncReduxToolKit precision={Precision.TWO}/>
-        <AddAnyNumberClassComponentV2 precision={Precision.ZERO}/>
+      </div>
+      <div className='container'>
+        <PostsFetchBySaga/>
+        <TodosFetchByThank/>
       </div>
     </div>
   );

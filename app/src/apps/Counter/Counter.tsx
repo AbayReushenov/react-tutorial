@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { actions } from '../store/count';
+import { actions } from '../../store/count';
 
 export const Counter: React.FC = () => {
   const dispatch = useDispatch();

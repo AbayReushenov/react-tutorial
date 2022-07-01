@@ -6,9 +6,10 @@ export interface Count {
 export interface AddCount {
   count: number;
 }
+
 export const count = {
   add: async (addCount: AddCount): Promise<Count> => {
-    const { count } = await AsyncApi.post(addCount);
-    return { count };
+    const data = await AsyncApi.post(addCount);
+    return data;
   },
 };

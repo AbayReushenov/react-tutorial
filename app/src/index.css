@@ -59,6 +59,7 @@ p {
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 0.99);
   text-align: left;
@@ -106,4 +107,24 @@ p {
   width: 2rem;
   border-radius: 45%;
   visibility: hidden;
+}
+
+.box-lists{
+  width: 600px;
+  padding: 10px;
+}
+
+.posts {
+  background-color: antiquewhite;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+.todos {
+  background-color: antiquewhite;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 }

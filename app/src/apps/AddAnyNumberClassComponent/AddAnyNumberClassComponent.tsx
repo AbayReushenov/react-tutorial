@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react';
 import { connect } from 'react-redux';
-import { addSomeCount, CountState } from '../store/count';
+import { addSomeCount, CountState } from '../../store/count';
 import { SwitchInputHeader } from '../common/components/SwitchInputHeader';
 import { pattern } from '../common/helpers/pattern';
 import { placeholder } from '../common/helpers/placeholder';
-import { RootState } from '../store';
+import { RootState } from '../../store';
 
 interface Props {
   precision: number;

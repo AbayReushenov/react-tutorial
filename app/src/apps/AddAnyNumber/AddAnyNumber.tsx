@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { actions } from '../store/count';
+import { actions } from '../../store/count';
 import { SwitchInputHeader } from '../common/components/SwitchInputHeader';
 import { pattern } from '../common/helpers/pattern';
 import { placeholder } from '../common/helpers/placeholder';

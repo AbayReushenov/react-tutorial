@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { RootState } from '../store';
-import { minusCount, plusCount } from '../store/count';
+import { RootState } from '../../store';
+import { minusCount, plusCount } from '../../store/count';
 
 interface Props {
   plusCount: () => void;
