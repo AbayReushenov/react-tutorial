@@ -18,11 +18,19 @@ import { CounterClassStateObject } from './apps/CounterClassStateObject/CounterC
 import { AddStoreFCAsync } from './apps/AddStoreFCAsync/AddStoreFCAsync';
 import { AddStoreCCAsync } from './apps/AddStoreCCAsync/AddStoreCCAsync';
 import { CounterFCAsync } from './apps/CounterFCAsync/CounterFCAsync';
+import { storeTodos } from './store/todos';
+import { storePost }from './store/posts'
+import { TodosFetchByMobx } from './apps/TodosFetch/TodosFetchByMobx';
+import { PostFetchByMobx } from './apps/PostFetch/PostFetchByMobx';
 
 function App() {
   return (
     <div className='main'>
-      <CounterDisplay state={state} store={storeClass} storeAsync={storeAsync} />
+      <CounterDisplay
+        state={state}
+        store={storeClass}
+        storeAsync={storeAsync}
+      />
       <div className='container'>
         <CounterFC state={state} />
         <CounterFCwhereStoreIsClass state={storeClass} />
@@ -36,17 +44,20 @@ function App() {
           precision={Precision.THREE}
         />
         <AddAnyNumberClassComponent state={state} precision={Precision.TWO} />
-        <AddAnyNumberClassComponentStoreClass state={storeClass} precision={Precision.ZERO} />
+        <AddAnyNumberClassComponentStoreClass
+          state={storeClass}
+          precision={Precision.ZERO}
+        />
       </div>
-      <div className="container">
+      <div className='container'>
         <CounterClassDefaultExport state={storeClass} />
         <CounterFCAsync state={storeAsync} />
-        <AddStoreFCAsync
-          state={storeAsync}
-          precision={Precision.THREE}
-        />
-        <AddStoreCCAsync state={storeAsync} precision={Precision.TWO}/>
-
+        <AddStoreFCAsync state={storeAsync} precision={Precision.THREE} />
+        <AddStoreCCAsync state={storeAsync} precision={Precision.TWO} />
+      </div>
+      <div className='container'>
+        <TodosFetchByMobx state={storeTodos}/>
+        <PostFetchByMobx state={storePost}/>
       </div>
     </div>
   );

@@ -115,7 +115,7 @@ p {
 }
 
 .posts {
-  background-color: antiquewhite;
+  background-color: rgb(162, 180, 153);
   height: 300px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;

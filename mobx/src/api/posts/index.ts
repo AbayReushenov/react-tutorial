@@ -7,13 +7,9 @@ export interface Post {
   body: string;
 }
 
-export interface Posts {
-  post: Post[];
-}
-
 export const posts = {
-  get: async (): Promise<Posts> => {
-    const { data } = await axiosApi.get<Posts>('/posts');
+  get: async (): Promise<Post[]> => {
+    const { data } = await axiosApi.get<Post[]>('/posts');
     return data;
   },
 };
