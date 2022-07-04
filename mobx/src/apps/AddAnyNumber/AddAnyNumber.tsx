@@ -41,7 +41,8 @@ export const AddAnyNumber: React.FC<Props> = ({
   return (
     <div className='box'>
       <h1 className='red'>Functional component</h1>
-      <h1>Enter any number</h1>
+      <h3 className='red'>state - object</h3>
+      <h3>Enter any number</h3>
       <div className='input'>
         <SwitchInputHeader addNumber={addNumber} />
         <input

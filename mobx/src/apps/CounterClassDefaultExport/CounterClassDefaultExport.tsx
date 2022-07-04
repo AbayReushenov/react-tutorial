@@ -20,16 +20,9 @@ class CounterClassDefaultExport extends React.Component<Props, State> {
     const handleMinus = counter.minus.bind(counter)
     return (
       <div className='box'>
-        <h1 className='blue'>Export default observer(Class component)</h1>
-        <pre>
-        <code>
-          {`
-export 
-default observer(CounterClassDefaultExport)
-`}
-        </code>
-      </pre>
-        <h1>Click to increase / decrease</h1>
+        <h1 className='blue'>Class<br/>component ver.2</h1>
+        <h3 className='blue'>store - class</h3>
+        <h3>Click to increase / decrease</h3>
         <div className='buttons'>
           <button className='button' onClick={handlePlus}>
             +

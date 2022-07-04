@@ -10,7 +10,7 @@ interface Props {
   state: Store;
 }
 
-export const AddAnyNumberWhereStoreIsClass: React.FC<Props> = ({
+export const AddAnyNumberStoreClass: React.FC<Props> = ({
   state,
   precision = Precision.ZERO,
 }) => {
@@ -40,8 +40,9 @@ export const AddAnyNumberWhereStoreIsClass: React.FC<Props> = ({
 
   return (
     <div className='box'>
-      <h1 className='red'>Functional component, store - class </h1>
-      <h1>Enter any number</h1>
+      <h1 className='red'>Functional component</h1>
+      <h3 className='blue'>store - class</h3>
+      <h3>Enter any number</h3>
       <div className='input'>
         <SwitchInputHeader addNumber={addNumber} />
         <input

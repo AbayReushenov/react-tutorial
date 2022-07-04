@@ -21,35 +21,9 @@ export class CounterClass extends React.Component<Props, State> {
     const handleMinus = counter.minus.bind(counter)
     return (
       <div className='box'>
-        <h1 className='blue'>Class component</h1>
-        <pre>
-        <code>
-          {`
-class Store {
-  count = 0;
-  constructor() {
-    makeObservable(this, {
-      count: observable,
-      isNegative: computed,
-      plus: action,
-      minus: action,
-    });
-  }
-  get isNegative() {
-    return this.count < 0 ? 'Yes' : 'No';
-  }
-  plus() {
-    this.count += 1;
-  }
-  minus() {
-    this.count -= 1;
-  }
-}
-export const storeClass = new Store();
-`}
-        </code>
-      </pre>
-        <h1>Click to increase / decrease</h1>
+        <h1 className='blue'>Class <br/>component</h1>
+        <h3 className='blue'>store - class</h3>
+        <h3>Click to increase / decrease</h3>
         <div className='buttons'>
           <button className='button' onClick={handlePlus}>
             +

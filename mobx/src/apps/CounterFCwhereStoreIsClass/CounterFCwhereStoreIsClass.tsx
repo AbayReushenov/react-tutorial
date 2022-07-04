@@ -9,15 +9,9 @@ interface Props {
 export const CounterFCwhereStoreIsClass: React.FC<Props> = observer(({ state }) => {
   return (
     <div className='box'>
-      <h1 className='red'>Functional component, store - class</h1>
-      <pre>
-        <code>
-          {`
-
-`}
-        </code>
-      </pre>
-      <h1>Click to increase / decrease</h1>
+      <h1 className='red'>Functional component</h1>
+      <h3 className='blue'>store - class</h3>
+      <h3>Click to increase / decrease</h3>
       <div className='buttons'>
         <button className='button' onClick={()=>state.plus()}>
           +
