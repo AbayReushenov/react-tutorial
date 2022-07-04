@@ -1,6 +1,7 @@
 import React from 'react';
 import { state } from './state/state';
 import { storeClass } from './Store/Store';
+import { storeClass as storeAsync } from './storeAsync/storeAsync';
 import { CounterFC } from './apps/CounterFC/CounterFC';
 import { CounterDisplay } from './apps/CounterDisplay/CounterDisplay';
 
@@ -14,11 +15,14 @@ import { AddAnyNumberStoreClass } from './apps/AddAnyNumberStoreClass/AddAnyNumb
 import { AddAnyNumberClassComponent } from './apps/AddAnyNumberClassComponent/AddAnyNumberClassComponent';
 import { AddAnyNumberClassComponentStoreClass } from './apps/AddAnyNumberClassComponentStoreClass/AddAnyNumberClassComponentStoreClass';
 import { CounterClassStateObject } from './apps/CounterClassStateObject/CounterClassStateObject';
+import { AddStoreFCAsync } from './apps/AddStoreFCAsync/AddStoreFCAsync';
+import { AddStoreCCAsync } from './apps/AddStoreCCAsync/AddStoreCCAsync';
+import { CounterFCAsync } from './apps/CounterFCAsync/CounterFCAsync';
 
 function App() {
   return (
     <div className='main'>
-      <CounterDisplay state={state} store={storeClass} />
+      <CounterDisplay state={state} store={storeClass} storeAsync={storeAsync} />
       <div className='container'>
         <CounterFC state={state} />
         <CounterFCwhereStoreIsClass state={storeClass} />
@@ -36,6 +40,12 @@ function App() {
       </div>
       <div className="container">
         <CounterClassDefaultExport state={storeClass} />
+        <CounterFCAsync state={storeAsync} />
+        <AddStoreFCAsync
+          state={storeAsync}
+          precision={Precision.THREE}
+        />
+        <AddStoreCCAsync state={storeAsync} precision={Precision.TWO}/>
 
       </div>
     </div>
