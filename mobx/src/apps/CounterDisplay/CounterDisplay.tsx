@@ -22,8 +22,7 @@ export const CounterDisplay: React.FC<Props> = ({
   return (
     <div className='counter'>
       <div className='header'>
-        <h1 className='title'>
-
+        <h1>
           <Counter
             state={state}
             title={'state is object: '}
@@ -42,15 +41,13 @@ export const CounterDisplay: React.FC<Props> = ({
             state={storeAsync}
           />
         </h1>
-                  <a
-            className='link'
-            href='https://github.com/AbayReushenov/react-tutorial/tree/main/mobx'
-            target='_blank'
-            rel='noreferrer'
-            data-hover="Hello, this is the tooltip"
-          >
-            github.com/AbayReushenov
-          </a>
+        <a
+          href='https://github.com/AbayReushenov/react-tutorial/tree/main/mobx'
+          target='_blank'
+          rel='noreferrer'
+        >
+          github.com/AbayReushenov
+        </a>
       </div>
     </div>
   );

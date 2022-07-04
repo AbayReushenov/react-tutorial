@@ -128,11 +128,3 @@ p {
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
 }
-
-.hide {
-  display: none;
-}
-.title:hover + .hide {
-  display: block;
-  color: green;
-}
