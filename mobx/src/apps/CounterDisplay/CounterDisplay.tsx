@@ -17,8 +17,8 @@ export const CounterDisplay: React.FC<Props> = ({ state, store }) => {
     <div className='counter'>
       <div className='header'>
         <h1>
-          Counters: <Counter state={state} title={"functional: "} className={'red'} /> {`  <>  `}
-          <Counter className={'blue'}  title={"Class: "} state={store} />
+          Counters: <Counter state={state} title={"state is object: "} className={'red'} /> {`  <>  `}
+          <Counter className={'blue'}  title={"state is class: "} state={store} />
         </h1>
       </div>
     </div>
