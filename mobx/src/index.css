@@ -109,7 +109,7 @@ p {
   visibility: hidden;
 }
 
-.box-lists{
+.box-lists {
   width: 600px;
   padding: 10px;
 }
@@ -127,4 +127,12 @@ p {
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
+}
+
+.hide {
+  display: none;
+}
+.title:hover + .hide {
+  display: block;
+  color: green;
 }
