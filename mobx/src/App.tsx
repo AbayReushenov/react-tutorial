@@ -13,6 +13,7 @@ import { AddAnyNumber } from './apps/AddAnyNumber/AddAnyNumber';
 import { AddAnyNumberStoreClass } from './apps/AddAnyNumberStoreClass/AddAnyNumberStoreClass';
 import { AddAnyNumberClassComponent } from './apps/AddAnyNumberClassComponent/AddAnyNumberClassComponent';
 import { AddAnyNumberClassComponentStoreClass } from './apps/AddAnyNumberClassComponentStoreClass/AddAnyNumberClassComponentStoreClass';
+import { CounterClassStateObject } from './apps/CounterClassStateObject/CounterClassStateObject';
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
       <div className='container'>
         <CounterFC state={state} />
         <CounterFCwhereStoreIsClass state={storeClass} />
+        <CounterClassStateObject state={state} />
         <CounterClass state={storeClass} />
-        <CounterClassDefaultExport state={storeClass} />
       </div>
       <div className='container'>
         <AddAnyNumber state={state} precision={Precision.ZERO} />
@@ -32,6 +33,10 @@ function App() {
         />
         <AddAnyNumberClassComponent state={state} precision={Precision.TWO} />
         <AddAnyNumberClassComponentStoreClass state={storeClass} precision={Precision.ZERO} />
+      </div>
+      <div className="container">
+        <CounterClassDefaultExport state={storeClass} />
+
       </div>
     </div>
   );
