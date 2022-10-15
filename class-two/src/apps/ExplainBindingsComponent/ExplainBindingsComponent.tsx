@@ -52,7 +52,7 @@ export class ExplainBindingsComponent extends React.Component<Props, State> {
 
   render() {
     return (
-      <>
+      <div className='module'>
         <ExplainBindingsComponentUI
           onClickMe={this.onClickMeBind}
           useArrowToShowThisOrThisState={
@@ -77,7 +77,7 @@ export class ExplainBindingsComponent extends React.Component<Props, State> {
             this.state.useArrowToShowThisOrThisState
           }
         />
-      </>
+      </div>
     );
   }
 }

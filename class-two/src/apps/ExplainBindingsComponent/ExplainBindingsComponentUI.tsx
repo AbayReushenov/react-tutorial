@@ -12,7 +12,7 @@ export default class ExplainBindingsComponentUI extends React.Component<
   render() {
     const onClickMe = this.props.onClickMe
     return (
-      <div className='module'>
+      <div className='inner'>
         <hr />
         <a href="https://stackoverflow.com/questions/50297676/react-binding-this-to-a-class-method">react-binding-this-to-a-class-method</a>
         <h1>{this.props.useArrowToShowThisOrThisState}</h1>

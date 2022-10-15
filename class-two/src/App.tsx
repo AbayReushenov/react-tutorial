@@ -12,7 +12,7 @@ interface State {}
 class App extends React.Component<Props, State> {
   render(): React.ReactNode {
     return (
-      <>
+      <div className='container'>
         <DefaultHeader />
         <Header />
         <Car/>
@@ -21,7 +21,7 @@ class App extends React.Component<Props, State> {
         <UnitOne />
         <Michael/>
         
-      </>
+      </div>
     );
   }
 }

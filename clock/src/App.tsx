@@ -1,10 +1,10 @@
-import React from 'react';
-import './App.css';
-import { Clock } from './components/Clock';
-import { FormattedDate } from './components/FormattedDate';
-import { FormattedDateMicroSeconds } from './components/FormattedDateMicroSeconds';
-import { data } from './data/data';
-import { Step } from './data/Step';
+import React from 'react'
+import './App.css'
+import { Clock } from './components/Clock'
+import { FormattedDate } from './components/FormattedDate'
+import { FormattedDateMicroSeconds } from './components/FormattedDateMicroSeconds'
+import { data } from './data/data'
+import { Step } from './data/Step'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         ))}
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
